@@ -1765,7 +1765,7 @@ h2::after {
 })();
 
 function openLightbox(el) {
-  var img = el.querySelector('img');
+  var img = el.tagName === 'IMG' ? el : el.querySelector('img');
   if (!img) return;
   var lb = document.getElementById('lightbox');
   document.getElementById('lb-img').src = img.src;
